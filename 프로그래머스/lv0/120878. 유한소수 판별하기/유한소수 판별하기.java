@@ -2,7 +2,6 @@ class Solution {
     public int solution(int a, int b) {
         int answer=1;
         int max=Math.max(a,b) , min=Math.min(a,b);
-        int max1=max;
         while(max%min!=0){
             int tmp= max;
             max= min;
