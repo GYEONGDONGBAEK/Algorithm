@@ -1,15 +1,15 @@
 class Solution {
     public int solution(String ineq, String eq, int n, int m) {
+        int answer=0;
         if(ineq.equals("<")&&eq.equals("=")){
-            return (n<=m)? 1:0;
+            answer=(n<=m)? 1:0;
         }else if(ineq.equals("<")&&eq.equals("!")){
-            return (n!=m && n<m)? 1:0;
+            answer=(n!=m && n<m)? 1:0;
         }else if(ineq.equals(">") && eq.equals("=")){
-            return (n>=m)? 1:0;
+            answer=(n>=m)? 1:0;
         }else if(ineq.equals(">") && eq.equals("!")){
-            return (n!=m &&n>m)? 1:0;
-        }else{
-            return 0;
+            answer=(n!=m &&n>m)? 1:0;
         }
+        return answer;
     }
 }
