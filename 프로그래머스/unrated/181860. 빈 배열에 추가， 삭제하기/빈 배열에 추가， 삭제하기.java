@@ -14,8 +14,12 @@ class Solution {
             }
         }
         int[] answer=new int[stack.size()];
-        for (int i=answer.length-1;i>=0;i--){
+        for(int i=answer.length-1;i>=0;i--){
             answer[i]=stack.pop();
+    /*  for(int i=0;i<answer.length;i++){
+            answer[i]=stack.get(i);
+    }
+    */
         }
         return answer;
     }
