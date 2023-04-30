@@ -1,18 +1,7 @@
-import java.util.*;
 class Solution {
     public String[] solution(String myStr) { 
-        String[] split = myStr.split("[abc]");
-        List<String> answer = new ArrayList<>();
-        for (String s : split) {
-        if (!s.isEmpty()) {
-            answer.add(s);
-            }
-        }
-        if (answer.isEmpty()) {
-            return new String[]{"EMPTY"};
-        } else {
-            return answer.toArray(new String[0]);
-        }
+        String[] answer = myStr.replaceAll("[abc]", " ").replaceAll("\\s+", " ").trim().split(" ");
+        return answer[0].equals("") ? new String[]{"EMPTY"} : answer;
     }
 }
 
