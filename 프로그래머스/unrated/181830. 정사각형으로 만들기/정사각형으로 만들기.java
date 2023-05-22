@@ -1,7 +1,21 @@
 import java.util.*;
 class Solution {
     public int[][] solution(int[][] arr) {
-        int rows = arr.length;
+        int max = Math.max(arr.length, arr[0].length);
+        int[][] answer=new int[max][max];
+
+        for (int i=0;i<arr.length;i++) {
+            for (int j=0;j<arr[i].length;j++) {
+                answer[i][j]=arr[i][j];
+            }
+        }
+
+        return answer;
+    }
+}
+
+/*
+int rows = arr.length;
         int cols = arr[0].length;
         
         
@@ -22,5 +36,4 @@ class Solution {
             return newarr;
         }
         return arr; //행의 수와 열의 수가 같을 경우
-    }
-}
+*/
