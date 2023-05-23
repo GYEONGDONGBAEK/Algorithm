@@ -23,8 +23,8 @@ class Solution {
             }
         });
         
-        int[] result = new int[numlist.length];
-        for (int i=0;i<numlist.length;i++) {
+        int[] result = new int[numArray.length];
+        for (int i=0;i<numArray.length;i++) {
             result[i] = numArray[i];
         }
         
