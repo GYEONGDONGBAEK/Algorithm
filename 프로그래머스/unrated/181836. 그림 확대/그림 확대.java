@@ -5,7 +5,7 @@ class Solution {
         int newRows=rows*k;
         int newCols=cols*k;
 
-        String[] newPicture=new String[newRows];
+        String[] ans=new String[newRows];
 
         for (int i=0;i<newRows;i++) {
             StringBuilder sb=new StringBuilder();
@@ -15,9 +15,9 @@ class Solution {
                 char pixel=picture[row].charAt(col);
                 sb.append(pixel);
             }
-            newPicture[i]=sb.toString();
+            ans[i]=sb.toString();
         }
 
-        return newPicture;
+        return ans;
     }
 }
