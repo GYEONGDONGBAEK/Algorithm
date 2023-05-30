@@ -7,8 +7,8 @@ class Solution {
             //n의 길이만큼 만들고 수로 채워져있지 않은곳은 공백이 되고 그 공백을 0으로 만들어서 문제에서 요구하는 2진수 문자열이 되게 하는 메서드
             str1[i] = String.format("%"+n+"s",Integer.toBinaryString(arr1[i])).replace(" ", "0");
             str2[i] = String.format("%"+n+"s",Integer.toBinaryString(arr2[i])).replace(" ", "0");
-            str1[i]=str1[i].replace("1","#").replace("0"," ");
-            str2[i]=str2[i].replace("1","#").replace("0"," ");
+            str1[i]=str1[i].replace("1","#");
+            str2[i]=str2[i].replace("1","#");
         }
          for (int i=0;i<n;i++){
             StringBuilder sb=new StringBuilder();
