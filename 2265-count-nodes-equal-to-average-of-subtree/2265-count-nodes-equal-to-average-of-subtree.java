@@ -14,8 +14,8 @@
  * }
  */
 class Solution {
+    int[] count = new int[1];
     public int averageOfSubtree(TreeNode root) {
-        int[] count = new int[1];
         SubTree(root, count);
         return count[0];
     }
