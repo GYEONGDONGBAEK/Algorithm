@@ -2,14 +2,15 @@ class Solution {
     public int[] solution(String s) {
         int n=s.length();
         int[] answer=new int[n];
-        
+
         for (int i=0;i<n;i++) {
             char c=s.charAt(i);
+            //lastIndexOf는 뒤에서부터 찾기때문에 올바른값을 얻을려면 substring이 필요함
             int index=s.substring(0, i).lastIndexOf(c);
-            
-            if (index<0) answer[i]=-1;
+
+            if (index==-1) answer[i]=-1;
             else answer[i]=i-index;
-            
+
         }
         return answer;
     }
