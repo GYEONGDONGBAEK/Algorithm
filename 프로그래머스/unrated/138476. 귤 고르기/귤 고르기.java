@@ -13,15 +13,15 @@ class Solution {
         }
         Arrays.sort(cnt);
         int sum=0;
-        int count=1;
+        int count=0;
         
         for (int i=size;i>=1;i--) {
             sum += cnt[i];
-            
+            count++;
             if (sum>=k) {
 	             break;
             }
-            count++;
+            
         }
         return count;
     }
